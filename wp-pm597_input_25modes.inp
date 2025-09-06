@@ -1,0 +1,102 @@
+########## DHAB-2state-38mode-calculation - wavepacket preparation ##########
+
+RUN-SECTION
+name=s2init-25modes
+propagation
+title = pm597-singlets
+steps auto=twice gridpop=el psi
+tinit=0.0 tfinal=1000.0 tout=1.0
+end-run-section
+
+
+OPERATOR-SECTION
+opname=pm597-operator-25modes
+end-operator-section
+
+
+SPF-BASIS-SECTION
+# Providing coefficients based on the S1 and S2 values
+multi-set
+v1,v2,v3,v16,v17,v18         = 5,6,8,6
+v4,v5,v19,v20                = 5,8,8,6
+v9,v10,v11,v12,v13           = 5,8,9,6
+v6,v7,v8,v14,v15             = 5,8,8,8
+v21,v22,v23,v24,v25          = 5,8,8,6
+
+
+
+end-spf-basis-section
+
+
+PRIMITIVE-BASIS-SECTION
+# Providing basis functions based on excitation strength of mode
+ v1  HO 7     0.00  1.0  1.0
+ v2  HO 10    0.00  1.0  1.0
+ v3  HO 8     0.00  1.0  1.0
+ v4  HO 8     0.00  1.0  1.0
+ v5  HO 9     0.00  1.0  1.0
+ v6  HO 8     0.00  1.0  1.0
+ v7  HO 6     0.00  1.0  1.0
+ v8  HO 6     0.00  1.0  1.0
+ v9  HO 10    0.00  1.0  1.0
+ v10 HO 9     0.00  1.0  1.0
+ v11 HO 7     0.00  1.0  1.0
+ v12 HO 9     0.00  1.0  1.0
+ v13 HO 6     0.00  1.0  1.0
+ v14 HO 6     0.00  1.0  1.0
+ v15 HO 6     0.00  1.0  1.0
+ v16 HO 5     0.00  1.0  1.0
+ v17 HO 4     0.00  1.0  1.0
+ v18 HO 4     0.00  1.0  1.0
+ v19 HO 4     0.00  1.0  1.0
+ v20 HO 5     0.00  1.0  1.0
+ v21 HO 4     0.00  1.0  1.0
+ v22 HO 4     0.00  1.0  1.0
+ v23 HO 5     0.00  1.0  1.0
+ v24 HO 4     0.00  1.0  1.0
+ v25 HO 4     0.00  1.0  1.0
+ el el  4
+
+end-primitive-basis-section
+
+INTEGRATOR-SECTION
+CMF/var = 0.125, 3.0E-6
+BS/spf = 9 , 1.0E-6
+SIL/A = 6 , 1.0E-6
+end-integrator-section
+
+INIT_WF-SECTION	
+build
+init_state = 3
+ v1  HO 0.0 0.0 1.0 1.0
+ v2  HO 0.0 0.0 1.0 1.0
+ v3  HO 0.0 0.0 1.0 1.0
+ v4  HO 0.0 0.0 1.0 1.0
+ v5  HO 0.0 0.0 1.0 1.0
+ v6  HO 0.0 0.0 1.0 1.0
+ v7  HO 0.0 0.0 1.0 1.0
+ v8  HO 0.0 0.0 1.0 1.0
+ v9  HO 0.0 0.0 1.0 1.0
+ v10 HO 0.0 0.0 1.0 1.0
+ v11 HO 0.0 0.0 1.0 1.0
+ v12 HO 0.0 0.0 1.0 1.0
+ v13 HO 0.0 0.0 1.0 1.0
+ v14 HO 0.0 0.0 1.0 1.0
+ v15 HO 0.0 0.0 1.0 1.0
+ v16 HO 0.0 0.0 1.0 1.0
+ v17 HO 0.0 0.0 1.0 1.0
+ v18 HO 0.0 0.0 1.0 1.0
+ v19 HO 0.0 0.0 1.0 1.0
+ v20 HO 0.0 0.0 1.0 1.0
+ v21 HO 0.0 0.0 1.0 1.0
+ v22 HO 0.0 0.0 1.0 1.0
+ v23 HO 0.0 0.0 1.0 1.0
+ v24 HO 0.0 0.0 1.0 1.0
+ v25 HO 0.0 0.0 1.0 1.0
+
+end-build
+end-init_wf-section
+
+end-input
+
+####################

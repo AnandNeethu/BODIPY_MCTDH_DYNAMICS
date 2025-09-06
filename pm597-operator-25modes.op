@@ -1,0 +1,491 @@
+###### ---- OPERATOR FILE ---- #####
+
+OP_DEFINE-SECTION
+title
+S0-S1-S2-S3 state dynamics, LVC model with 30 modes (11 AG + 21 AG vibrational modes)
+end-title
+end-op_define-section
+
+PARAMETER-SECTION
+
+# Vibrational mode frequencies
+# AG symmetric modes
+
+v1  = 0.0025, eV
+v2  = 0.0063, eV
+v3  = 0.0095, eV
+v4  = 0.0168, eV
+v5  = 0.0175, eV
+v6  = 0.0196, eV
+v7  = 0.0337, eV
+v8  = 0.0633, eV
+#v9  = 0.1249, eV
+#v10 = 0.1423, eV
+#v11 = 0.1577, eV
+#v12 = 0.1770, eV
+#v13 = 0.1788, eV
+
+# AU asymmetric modes
+
+v9   = 0.0025, eV
+v10  = 0.0063, eV
+v11  = 0.0095, eV
+v12  = 0.0124, eV
+v13  = 0.0175, eV
+v14  = 0.0196, eV
+v15  = 0.0337, eV
+v16  = 0.0633, eV
+#v22  = 0.1423, eV
+#v23  = 0.1577, eV
+#v24  = 0.1788, eV
+v17  = 0.0292, eV
+v18  = 0.0318, eV
+v19  = 0.0369, eV
+v20  = 0.0723, eV
+v21  = 0.1241, eV
+v22  = 0.1459, eV
+v23  = 0.1527, eV
+v24  = 0.1844, eV
+v25  = 0.1948, eV
+
+
+
+# Kappa - S0 state
+yk1  =  0.0001, eV
+yk2  = -0.0001, eV
+yk3  =  0.0001, eV
+yk4  = -0.0001, eV
+yk5  = -0.0002, eV
+yk6  =  0.0010, eV
+yk7  = -0.0005, eV
+yk8  = -0.0005, eV
+#yk9  = -0.0010, eV
+#yk10 =  0.0008, eV
+#yk11 =  0.0008, eV
+#yk12 =  0.0006, eV
+#yk13 = -0.0002, eV
+
+
+# Kappa - S1 state
+xk1  =  0.0005, eV
+xk2  = -0.0115, eV
+xk3  =  0.0072, eV
+xk4  = -0.0077, eV
+xk5  = -0.0139, eV
+xk6  = -0.0092, eV
+xk7  = -0.0070, eV
+xk8  = -0.0248, eV
+#xk9  = -0.0029, eV
+#xk10 = -0.0049, eV
+#xk11 =  0.0564, eV
+#xk12 = -0.0048, eV   
+#xk13 = -0.0067, eV
+
+
+# Kappa - S2 state
+ak1  =  0.0024, eV
+ak2  = -0.0090, eV
+ak3  =  0.0044, eV
+ak4  = -0.0091, eV
+ak5  = -0.0191, eV
+ak6  = -0.0145, eV
+ak7  = -0.0256, eV
+ak8  = -0.0587, eV
+#ak9  = -0.0941, eV
+#ak10 = -0.0733, eV
+#ak11 = -0.0909, eV
+#ak12 =  0.0862, eV 
+#ak13 = -0.1110, eV
+
+# Kappa - S3 state
+bk1  =  0.0022, eV
+bk2  = -0.0089, eV
+bk3  =  0.0043, eV
+bk4  = -0.0090, eV
+bk5  = -0.0171, eV
+bk6  = -0.0129, eV
+bk7  = -0.0261, eV
+bk8  = -0.0596, eV
+#bk9  = -0.0881, eV
+#bk10 = -0.0662, eV
+#bk11 = -0.0724, eV
+#bk12 =  0.0664, eV
+#bk13 = -0.0885, eV
+
+
+# Lambda of A2 modes (v50-v72)
+# S0-S1 coupling
+lyx1  = 0.0000, eV
+lyx2  = 0.0000, eV
+lyx3  = 0.0000, eV
+lyx4  = 0.0000, eV
+lyx5  = 0.0000, eV
+lyx6  = 0.0000, eV
+lyx7  = 0.0000, eV
+lyx8  = 0.0000, eV
+lyx9  = 0.0000, eV
+lyx10 = 0.0000, eV
+lyx11 = 0.0000, eV
+lyx12 = 0.0000, eV
+lyx13 = 0.0000, eV
+lyx14 = 0.0000, eV
+lyx15 = 0.0000, eV
+lyx16 = 0.0000, eV
+lyx17 = 0.0000, eV
+
+
+
+# Lambda of A2 modes (v50-v72)
+# S0-S2 coupling
+lya1  = 0.0000, eV
+lya2  = 0.0000, eV
+lya3  = 0.0000, eV
+lya4  = 0.0000, eV
+lya5  = 0.0000, eV
+lya6  = 0.0000, eV
+lya7  = 0.0000, eV
+lya8  = 0.0000, eV
+lya9  = 0.0000, eV
+lya10 = 0.0000, eV
+lya11 = 0.0000, eV
+lya12 = 0.0000, eV
+lya13 = 0.0000, eV
+lya14 = 0.0000, eV
+lya15 = 0.0000, eV
+lya16 = 0.0000, eV
+lya17 = 0.0000, eV
+
+# Lambda of A2 modes (v50-v72)
+# S0-s3 coupling
+lyb1  = 0.0000, eV
+lyb2  = 0.0000, eV
+lyb3  = 0.0000, eV
+lyb4  = 0.0000, eV
+lyb5  = 0.0000, eV
+lyb6  = 0.0000, eV
+lyb7  = 0.0000, eV
+lyb8  = 0.0000, eV
+lyb9  = 0.0000, eV
+lyb10 = 0.0000, eV
+lyb11 = 0.0000, eV
+lyb12 = 0.0000, eV
+lyb13 = 0.0000, eV
+lyb14 = 0.0000, eV
+lyb15 = 0.0000, eV
+lyb16 = 0.0000, eV
+lyb17 = 0.0000, eV
+
+
+# Lambda of A2 modes (v50-v72)
+# S2-S3 coupling
+
+lab1  = 0.0000, eV
+lab2  = 0.0000, eV
+lab3  = 0.0000, eV
+lab4  = 0.0000, eV
+lab5  = 0.0000, eV
+lab6  = 0.0000, eV
+lab7  = 0.0000, eV
+lab8  = 0.0000, eV
+lab9  = 0.0176, eV
+lab10 = 0.0176, eV
+lab11 = 0.0174, eV
+lab12 = 0.0465, eV
+lab13 = 0.1009, eV
+lab14 = 0.0956, eV
+lab15 = 0.1177, eV
+lab16 = 0.0333, eV
+lab17 = 0.0623, eV
+
+
+# Lambda of A2 modes (v50-v72)
+# S1-S3 coupling
+
+lxb1   = 0.0000, eV
+lxb2   = 0.0000, eV
+lxb3   = 0.0000, eV
+lxb4   = 0.0000, eV
+lxb5   = 0.0000, eV
+lxb6   = 0.0000, eV
+lxb7   = 0.0000, eV
+lxb8   = 0.0000, eV
+lxb9   = 0.0258, eV
+lxb10  = 0.0237, eV
+lxb11  = 0.0051, eV
+lxb12  = 0.0704, eV
+lxb13  = 0.1408, eV
+lxb14  = 0.1439, eV
+lxb15  = 0.1653, eV
+lxb16  = 0.0536, eV
+lxb17  = 0.1025, eV
+
+
+# Lambda of A2 modes (v50-v72)
+# S1-S2 coupling
+lxa1  = 0.0358, eV
+lxa2  = 0.0351, eV
+lxa3  = 0.0443, eV
+lxa4  = 0.0678, eV
+lxa5  = 0.0584, eV
+lxa6  = 0.0601, eV
+lxa7  = 0.1043, eV
+lxa8  = 0.1436, eV
+lxb9  = 0.0000, eV
+lxb10 = 0.0000, eV
+lxb11 = 0.0000, eV
+lxb12 = 0.0000, eV
+lxb13 = 0.0000, eV
+lxb14 = 0.0000, eV
+lxb15 = 0.0000, eV
+lxb16 = 0.0000, eV
+lxb17 = 0.0000, eV
+
+
+
+# Vertical excitation energies for S0, S1, S2 and S3 states
+E0y = 0.0000, eV
+E0x = 2.8900, eV
+E0a = 3.8064, eV
+E0b = 4.0532, eV
+end-parameter-section
+
+HAMILTONIAN-SECTION
+---------------------------------------------------------------------------------------------------------------------
+modes | v1 | v2 | v3 | v4 | v5 | v6 | v7 | v8 | v9 | v10 | v11 | v12 | v13 | v14 | v15 | v16 | v17 | v18 | v19 | v20 
+modes | v21 | v22 | v23 | v24 | v25 | el
+---------------------------------------------------------------------------------------------------------------------
+ 
+
+# KE
+v1  |1 KE
+v2  |2 KE
+v3  |3 KE
+v4  |4 KE
+v5  |5 KE
+v6  |6 KE
+v7  |7 KE
+v8  |8 KE
+v9  |9 KE
+v10 |10 KE
+v11 |11 KE
+v12 |12 KE
+v13 |13 KE
+v14 |14 KE
+v15 |15 KE
+v16 |16 KE
+v17 |17 KE
+v18 |18 KE
+v19 |19 KE
+v20 |20 KE
+v21 |21 KE
+v22 |22 KE
+v23 |23 KE
+v24 |24 KE
+v25 |25 KE
+
+
+
+
+# PE
+0.5*v1  |1 q^2
+0.5*v2  |2 q^2
+0.5*v3  |3 q^2
+0.5*v4  |4 q^2
+0.5*v5  |5 q^2
+0.5*v6  |6 q^2
+0.5*v7  |7 q^2
+0.5*v8  |8 q^2
+0.5*v9  |9 q^2
+0.5*v10 |10 q^2
+0.5*v11 |11 q^2
+0.5*v12 |12 q^2
+0.5*v13 |13 q^2
+0.5*v14 |14 q^2
+0.5*v15 |15 q^2
+0.5*v16 |16 q^2
+0.5*v17 |17 q^2
+0.5*v18 |18 q^2
+0.5*v19 |19 q^2
+0.5*v20 |20 q^2
+0.5*v21 |21 q^2
+0.5*v22 |22 q^2
+0.5*v23 |23 q^2
+0.5*v24 |24 q^2
+0.5*v25 |25 q^2
+
+
+
+
+# Vertical Excitation Energies
+E0y  |26 S1&1
+E0x  |26 S2&2
+E0a  |26 S3&3
+E0b  |26 S4&4
+
+# Vibronic coupling constants
+
+# Linear (Kappa) values - S0 state
+yk1  |1  q   |26 S1&1
+yk2  |2  q   |26 S1&1
+yk3  |3  q   |26 S1&1
+yk4  |4  q   |26 S1&1
+yk5  |5  q   |26 S1&1
+yk6  |6  q   |26 S1&1
+yk7  |7  q   |26 S1&1
+yk8  |8  q   |26 S1&1
+
+
+
+
+# Linear (Kappa) values - S1 state
+xk1  |1  q   |26 S2&2
+xk2  |2  q   |26 S2&2
+xk3  |3  q   |26 S2&2
+xk4  |4  q   |26 S2&2
+xk5  |5  q   |26 S2&2
+xk6  |6  q   |26 S2&2
+xk7  |7  q   |26 S2&2
+xk8  |8  q   |26 S2&2
+
+
+
+
+
+# Linear (Kappa) values - S2 state
+ak1  |1  q   |26 S3&3
+ak2  |2  q   |26 S3&3
+ak3  |3  q   |26 S3&3
+ak4  |4  q   |26 S3&3
+ak5  |5  q   |26 S3&3
+ak6  |6  q   |26 S3&3
+ak7  |7  q   |26 S3&3
+ak8  |8  q   |26 S3&3
+
+
+
+
+# Linear (Kappa) values - S3 state
+bk1  |1  q   |26 S4&4
+bk2  |2  q   |26 S4&4
+bk3  |3  q   |26 S4&4
+bk4  |4  q   |26 S4&4
+bk5  |5  q   |26 S4&4
+bk6  |6  q   |26 S4&4
+bk7  |7  q   |26 S4&4
+bk8  |8  q   |26 S4&4
+
+
+
+# Interstate vibronic coupling constants
+# Linear (lambda) values for S0-S1 coupling modes
+lyx1   |9  q |26 S1&2
+lyx2   |10 q |26 S1&2
+lyx3   |11 q |26 S1&2
+lyx4   |12 q |26 S1&2
+lyx5   |13 q |26 S1&2
+lyx6   |14 q |26 S1&2
+lyx7   |15 q |26 S1&2
+lyx8   |16 q |26 S1&2
+lyx9   |17 q |26 S1&2
+lyx10  |18 q |26 S1&2
+lyx11  |19 q |26 S1&2
+lyx12  |20 q |26 S1&2
+lyx13  |21 q |26 S1&2
+lyx14  |22 q |26 S1&2
+lyx15  |23 q |26 S1&2
+lyx16  |24 q |26 S1&2
+lyx17  |25 q |26 S1&2
+
+
+
+# Interstate vibronic coupling constants
+# Linear (lambda) values for S0-S2 coupling modes
+lya1   |9  q |26 S1&3
+lya2   |10 q |26 S1&3
+lya3   |11 q |26 S1&3
+lya4   |12 q |26 S1&3
+lya5   |13 q |26 S1&3
+lya6   |14 q |26 S1&3
+lya7   |15 q |26 S1&3
+lya8   |16 q |26 S1&3
+lya9   |17 q |26 S1&3
+lya10  |18 q |26 S1&3
+lya11  |19 q |26 S1&3
+lya12  |20 q |26 S1&3
+lya13  |21 q |26 S1&3
+lya14  |22 q |26 S1&3
+lya15  |23 q |26 S1&3
+lya16  |24 q |26 S1&3
+lya17  |25 q |26 S1&3
+
+
+# Interstate vibronic coupling constants
+# Linear (lambda) values for S0-S3 coupling modes
+lyb1   |9  q |26 S1&4
+lyb2   |10 q |26 S1&4
+lyb3   |11 q |26 S1&4
+lyb4   |12 q |26 S1&4
+lyb5   |13 q |26 S1&4
+lyb6   |14 q |26 S1&4
+lyb7   |15 q |26 S1&4
+lyb8   |16 q |26 S1&4
+lyb9   |17 q |26 S1&4
+lyb10  |18 q |26 S1&4
+lyb11  |19 q |26 S1&4
+lyb12  |20 q |26 S1&4
+lyb13  |21 q |26 S1&4
+lyb14  |22 q |26 S1&4
+lyb15  |23 q |26 S1&4
+lyb16  |24 q |26 S1&4
+lyb17  |25 q |26 S1&4
+
+
+# Interstate vibronic coupling constants
+# Linear (lambda) values for S2-S3 coupling modes
+lab1   |9  q |26 S3&4
+lab2   |10 q |26 S3&4
+lab3   |11 q |26 S3&4
+lab4   |12 q |26 S3&4
+lab5   |13 q |26 S3&4
+lab6   |14 q |26 S3&4
+lab7   |15 q |26 S3&4
+lab8   |16 q |26 S3&4
+lab9   |17 q |26 S3&4
+lab10  |18 q |26 S3&4
+lab11  |19 q |26 S3&4
+lab12  |20 q |26 S3&4
+lab13  |21 q |26 S3&4
+lab14  |22 q |26 S3&4 
+lab15  |23 q |26 S3&4
+lab16  |24 q |26 S3&4
+lab17  |25 q |26 S3&4
+
+
+
+# Interstate vibronic coupling constants
+# Linear (lambda) values for S1-S3 coupling modes
+lxb1   |9  q |26 S2&4
+lxb2   |10 q |26 S2&4
+lxb3   |11 q |26 S2&4
+lxb4   |12 q |26 S2&4
+lxb5   |13 q |26 S2&4
+lxb6   |14 q |26 S2&4
+lxb7   |15 q |26 S2&4
+lxb8   |16 q |26 S2&4
+lxb9   |17 q |26 S2&4
+lxb10  |18 q |26 S2&4
+lxb11  |19 q |26 S2&4
+lxb12  |20 q |26 S2&4
+lxb13  |21 q |26 S2&4
+lxb14  |22 q |26 S2&4
+lxb15  |23 q |26 S2&4
+lxb16  |24 q |26 S2&4
+lxb17  |25 q |26 S2&4
+
+
+
+end-hamiltonian-section
+
+end-operator
+
+##############################################################
